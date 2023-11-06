@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            text-align: center;
+            background-color: bisque;
+            margin: 20px;
+        }
+        button{
+            padding: 15px;
+            color: brown;
+            background-color: aqua;
+            border-style: none;
+            border-radius: 20px;
+            font-size: 18px;
+            border-style: solid;
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Addition of two number</h1>
+    </div>
+    <hr>
+    <div >
+        Enter Text: <input type="text" id="text" style="height: 20px; width: 100px;" placeholder="Enter Number" required/>
+        <br>
+        <br>
+        Enter Text2: <input type="text" id="text2" style="height: 20px; width: 100px;" placeholder="Enter Number" required/>
+        <br>
+        <br>
+        <button onclick="add()" id="b1" >Addition</button>
+        <button onclick="sub()" id="b1">Subtraction</button>
+        <div>
+            <h2 id="result"></h2>
+        </div>
+    </div>
+
+    <script>
+        function add(){
+            var a = parseInt(document.getElementById("text").value);
+            var b = parseInt(document.getElementById("text2").value);
+
+            var total= (a + b);
+            document.getElementById('result').innerHTML=total;
+            document.getElementById("text").value = "";
+            document.getElementById("text2").value = "";
+        }
+        function sub(){
+            var a = parseInt(document.getElementById("text").value);
+            var b = parseInt(document.getElementById("text2").value);
+
+            var total= (a - b);
+            document.getElementById('result').innerHTML=total;
+            document.getElementById("text").value = "";
+            document.getElementById("text2").value = "";
+        }
+    </script>
+    
+</body>
+</html>
